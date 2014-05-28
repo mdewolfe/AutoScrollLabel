@@ -138,7 +138,7 @@ static void each_object(NSArray *objects, void (^block)(id object))
         _fadeLength = fadeLength;
         
         [self refreshLabels];
-        [self applyGradientMaskForFadeLength:fadeLength enableFade:NO];
+        [self applyGradientMaskForFadeLength:fadeLength enableFade:YES];
     }
 }
 
@@ -307,7 +307,7 @@ static void each_object(NSArray *objects, void (^block)(id object))
         _scrolling = NO;
         
         // remove the left shadow
-        [self applyGradientMaskForFadeLength:self.fadeLength enableFade:NO];
+        [self applyGradientMaskForFadeLength:self.fadeLength enableFade:YES];
         
         // setup pause delay/loop
         if (finished)
